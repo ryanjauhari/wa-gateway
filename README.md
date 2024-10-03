@@ -1,17 +1,17 @@
-# Headless Multi Session Whatsapp Gateway NodeJS
+# Multi Session Whatsaapp Gatewa dengan NodeJS
 
-Easy Setup Headless multi session Whatsapp Gateway with NodeJS
+Mudah di gunakan, support nodejs v16, dan dapat di install di windows dan linux.
 
-- Support multi device
-- Support multi session / multi phone number
-- Anti delay message
-- Bulk Message
+- Mendukung berbagai devices karena menjalankann nodejs
+- Mendukung multi sesi, dapat menjalankan lebih dari 1 akun Whatsapp
+- Dilengkapi dengan delay anti banned.
+- Dilengkapi dengan fitur kirim pesan masssal...
 
-#### Based on [wa-multi-session](https://github.com/mimamch/wa-multi-session)
+#### Di buat dengan library [wa-multi-session](https://github.com/mimamch/wa-multi-session)
 
-## Environment Variables
+## Konfigurasi lingkungan kerja
 
-To run this project, you will need to add the following environment variables to your .env file
+Untuk menjalankan file ini pastikan kamu membuat sebuah file baru .env dan meleakan format berikut ini. Port dan secretkey ganti!
 
 ```
 // .env
@@ -20,41 +20,44 @@ PORT=5001 // which port to running on your machine
 KEY=mysupersecretkey # For Securing Some Data
 ```
 
-## Install and Running
+## Cara mengisntall program
 
-Clone the project
-
-```bash
-  git clone https://github.com/mimamch/wa_gateway.git
-```
-
-Go to the project directory
+Salin repositori ini ke folder kerja kamu.
 
 ```bash
-  cd wa_gateway
+  git clone https://github.com/ryanjauhari/wa-gateway.git
 ```
 
-Install dependencies
+Buka folder yang di salin sebelumnya
+
+```bash
+  cd wa-gateway
+```
+
+Jalankan NPM ini untuk mengisntall semua paket defensi yang di butuhkan.
 
 ```bash
   npm install
 ```
 
-Start the server
+Jalankan perintah NPM ini untuk menjalankan program.
 
 ```bash
   npm run start
 ```
 
-Open On Browser & Start New Session
+Buka browser, dan buat sesi baru dengan mengunjungi URL berikut
 
 ```bash
-  http://localhost:5000/start-session?session=mysession&scan=true
+  http://localhost:{PORT-ANDA}/start-session?session={NAMA-SESI}&scan=true
 ```
 
-## API Reference
+NB : Ubah port dengan kode port yang kamu gunakan, ubah Nama sesi dengan nama sesi yang di inginkan without space.
 
-#### Add new session
+
+## Fitur API yang di sematkan
+
+#### Menambah Sessi baru
 
 ```
   GET /start-session?session=NEW_SESSION_NAME&scan=true
@@ -125,12 +128,12 @@ npm install wa-multi-session@latest
 
 ## Documentation
 
-For detailed documentation, including guides and API references, please visit the [official documentation](https://github.com/mimamch/wa-gateway).
+Repositori ini merupakann kloning dari repositori aslinya WhatsappGateway API liha sumber asli di sini [official documentation](https://github.com/mimamch/wa-gateway).
 
 ## Contributing
 
-Contributions are welcome! Please follow the guidelines outlined in the [CONTRIBUTING.md](https://github.com/mimamch/wa-gateway/blob/main/CONTRIBUTING.md) file.
+Jika ingin berkontribusi terhadap project ini, bisa langsung request ke ke reposiotri original nya. [CONTRIBUTING.md](https://github.com/mimamch/wa-gateway/blob/main/CONTRIBUTING.md) file.
 
 ## License
 
-This library is licensed under the [MIT License](https://github.com/mimamch/wa-gateway/blob/main/LICENSE).
+Project ini di lisensikan di atas [MIT License](https://github.com/mimamch/wa-gateway/blob/main/LICENSE).
